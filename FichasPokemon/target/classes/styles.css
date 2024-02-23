@@ -1,0 +1,10 @@
+.menu-button {
+    -fx-text-fill: black;
+    -fx-background-color: white;
+    -fx-font-size: 25px;
+    -fx-background-radius: 20px;
+}
+.menu-button:hover {
+    -fx-background-color: #365fac;
+    -fx-text-fill: #ffcc01;
+}

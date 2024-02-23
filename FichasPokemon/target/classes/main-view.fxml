@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nwintle.fichaspokemon.controllers.MainController">
+   <children>
+      <BorderPane layoutX="-1.0">
+         <top>
+            <Pane prefHeight="90.0" prefWidth="1280.0" style="-fx-background-color: #313131;" styleClass="menu-background" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="133.0" fitWidth="475.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/PokemonManager.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton buttonType="RAISED" layoutX="475.0" layoutY="22.0" onMouseClicked="#playersClicked" prefHeight="47.0" prefWidth="155.0" styleClass="menu-button" stylesheets="@styles.css" text="Jugadores">
+                     <font>
+                        <Font name="Calibri" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="650.0" layoutY="21.0" onMouseClicked="#pokemonClicked" prefHeight="48.0" prefWidth="155.0" styleClass="menu-button" stylesheets="@styles.css" text="Pokemon" />
+                  <JFXButton buttonType="RAISED" layoutX="826.0" layoutY="21.0" onMouseClicked="#mercadoClicked" prefHeight="48.0" prefWidth="155.0" styleClass="menu-button" stylesheets="@styles.css" text="Mercado" />
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane fx:id="pMain" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

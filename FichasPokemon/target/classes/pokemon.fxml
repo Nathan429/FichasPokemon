@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="630.0" prefHeight="630.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nwintle.fichaspokemon.controllers.PokemonController">
+   <children>
+      <Pane prefHeight="630.0" prefWidth="300.0" style="-fx-background-color: lightgray;">
+         <children>
+            <Label fx:id="id" layoutX="14.0" layoutY="38.0" prefHeight="38.0" prefWidth="75.0" text="ID">
+               <font>
+                  <Font name="Calibri" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="name" layoutX="91.0" layoutY="38.0" prefHeight="38.0" prefWidth="153.0" text="NAME ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="hp" layoutX="94.0" layoutY="355.0" prefHeight="18.0" prefWidth="114.0" style="-fx-alignment: center;" text="hp">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font></Label>
+            <Label fx:id="lvl" layoutX="214.0" layoutY="39.0" prefHeight="35.0" prefWidth="60.0" style="-fx-alignment: CENTER_RIGHT;" text="lvl">
+               <font>
+                  <Font name="Calibri" size="30.0" />
+               </font></Label>
+            <Label fx:id="value" layoutX="21.0" layoutY="461.0" text="val">
+               <font>
+                  <Font name="Calibri" size="28.0" />
+               </font></Label>
+            <Pane fx:id="imgContainer" layoutX="25.0" layoutY="74.0" prefHeight="250.0" prefWidth="250.0" style="-fx-background-color: white; -fx-background-radius: 40px;">
+               <children>
+                  <ImageView fx:id="img" fitHeight="200.0" fitWidth="200.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="lifeBarContainer" layoutX="55.0" layoutY="335.0" prefHeight="20.0" prefWidth="190.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+               <children>
+                  <Pane fx:id="lifeBar" layoutX="7.0" layoutY="5.0" prefHeight="10.0" prefWidth="177.0" style="-fx-background-color: darkgreen; -fx-background-radius: 10px;" />
+               </children>
+            </Pane>
+            <Label fx:id="atk" layoutX="25.0" layoutY="400.0" text="atk">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="def" layoutX="113.0" layoutY="400.0" prefHeight="23.0" prefWidth="75.0" style="-fx-alignment: center;" text="def">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="spd" layoutX="199.0" layoutY="400.0" prefHeight="23.0" prefWidth="75.0" style="-fx-alignment: CENTER_RIGHT;" text="spd">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonEdit" layoutX="232.0" layoutY="585.0" mnemonicParsing="false" onMouseClicked="#editClicked" text="Edit" />
+            <Button layoutX="10.0" layoutY="585.0" mnemonicParsing="false" onMouseClicked="#buyHp" text="Comprar Vida" />
+            <Pane fx:id="editPane" prefHeight="630.0" prefWidth="300.0" style="-fx-background-color: lightgrey;">
+               <children>
+                  <TextField fx:id="editName" layoutX="134.0" layoutY="141.0" style="-fx-background-color: white;" />
+                  <Label layoutX="58.0" layoutY="145.0" text="Nombre" />
+                  <Button layoutX="113.0" layoutY="527.0" mnemonicParsing="false" onMouseClicked="#editConfirm" text="Confirmar" />
+                  <TextField fx:id="editHp" layoutX="134.0" layoutY="263.0" style="-fx-background-color: white;" />
+                  <TextField fx:id="editType" layoutX="134.0" layoutY="180.0" style="-fx-background-color: white;" />
+                  <TextField fx:id="editLvl" layoutX="134.0" layoutY="221.0" style="-fx-background-color: white;" />
+                  <TextField fx:id="editAtk" layoutX="134.0" layoutY="302.0" style="-fx-background-color: white;" />
+                  <TextField fx:id="editDef" layoutX="134.0" layoutY="340.0" style="-fx-background-color: white;" />
+                  <TextField fx:id="editSpd" layoutX="134.0" layoutY="385.0" style="-fx-background-color: white;" />
+                  <TextField fx:id="editGender" layoutX="134.0" layoutY="432.0" style="-fx-background-color: white;" />
+                  <TextField fx:id="editValue" layoutX="134.0" layoutY="476.0" style="-fx-background-color: white;" />
+                  <Label layoutX="69.0" layoutY="184.0" text="Tipo" />
+                  <Label layoutX="68.0" layoutY="225.0" text="Nivel" />
+                  <Label layoutX="43.0" layoutY="267.0" text="Vida (0 - 100)" />
+                  <Label layoutX="61.0" layoutY="306.0" text="Ataque" />
+                  <Label layoutX="58.0" layoutY="344.0" text="Defensa" />
+                  <Label layoutX="52.0" layoutY="389.0" text="Velocidad" />
+                  <Label layoutX="60.0" layoutY="436.0" text="Genero" />
+                  <Label layoutX="65.0" layoutY="480.0" text="Valor" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <ScrollPane fx:id="scrollPane" layoutX="300.0" maxHeight="630.0" prefHeight="580.0" prefWidth="980.0">
+         <content>
+            <GridPane fx:id="gridPane">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Button layoutX="800.0" layoutY="583.0" mnemonicParsing="false" onMouseClicked="#nextClicked" prefHeight="45.0" prefWidth="75.0" styleClass="menu-button" stylesheets="@styles.css" text="-&gt;" />
+      <Button layoutX="705.0" layoutY="583.0" mnemonicParsing="false" onMouseClicked="#prevClicked" prefHeight="45.0" prefWidth="75.0" styleClass="menu-button" stylesheets="@styles.css" text="&lt;-" />
+   </children>
+</AnchorPane>
